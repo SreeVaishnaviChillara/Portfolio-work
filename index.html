@@ -4,19 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sree Vaishnavi Chillara – VFX Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #f0f0f0;
+      background: #fff4f4;
+      color: #4d4d4d;
     }
     header {
-      background: linear-gradient(to right, #1f1c2c, #928dab);
+      background: linear-gradient(to right, #ffd6e0, #e0bbff);
       padding: 2rem;
       text-align: center;
       font-size: 2rem;
       font-weight: bold;
+      color: #5a3e36;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .section-buttons {
       display: flex;
@@ -26,22 +29,29 @@
       padding: 2rem;
     }
     .section-buttons button {
-      background-color: #292b2c;
-      color: white;
-      border: none;
+      background-color: #ffe0f0;
+      color: #5a3e36;
+      border: 2px solid #ffc1cc;
       padding: 1rem 2rem;
-      border-radius: 10px;
+      border-radius: 15px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
     }
     .section-buttons button:hover {
-      background-color: #515254;
+      background-color: #ffebf5;
+      transform: scale(1.05);
     }
     .video-section {
       display: none;
       padding: 2rem;
       text-align: center;
+      background: #fff8fc;
+      border-radius: 15px;
+      margin: 2rem auto;
+      width: 90%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     .video-section.active {
       display: block;
@@ -51,68 +61,76 @@
       height: auto;
       border-radius: 15px;
       margin-top: 1rem;
+      border: 3px solid #ffe6f0;
     }
     h2 {
       margin-bottom: 1rem;
+      color: #b85c7e;
+    }
+    .emoji {
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
     }
   </style>
 </head>
 <body>
-  <header>Sree Vaishnavi Chillara – Visual Effects Portfolio</header>
+  <header>
+    🎨 Sree Vaishnavi Chillara – Visual Effects Portfolio ✨
+    <p style="font-size: 1rem; font-weight: normal; margin-top: 0.5rem;">Let’s make pixels dance and magic happen! 🪄💫</p>
+  </header>
 
   <div class="section-buttons">
-    <button onclick="showSection('daytonight')">Day to Night</button>
-    <button onclick="showSection('compositing')">3D Compositing</button>
-    <button onclick="showSection('paint')">Paint Cleanup</button>
-    <button onclick="showSection('roto')">Roto</button>
-    <button onclick="showSection('keying')">Keying</button>
-    <button onclick="showSection('parentgeenee')">ParentGeenee Live Project</button>
-    <button onclick="showSection('cgknights')">CG Knights Team Project</button>
+    <button onclick="showSection('daytonight')"><i class="fa-solid fa-cloud-moon"></i> Day to Night</button>
+    <button onclick="showSection('compositing')"><i class="fa-solid fa-cube"></i> 3D Compositing</button>
+    <button onclick="showSection('paint')"><i class="fa-solid fa-paintbrush"></i> Paint Cleanup</button>
+    <button onclick="showSection('roto')"><i class="fa-solid fa-scissors"></i> Roto</button>
+    <button onclick="showSection('keying')"><i class="fa-solid fa-key"></i> Keying</button>
+    <button onclick="showSection('parentgeenee')"><i class="fa-solid fa-rocket"></i> ParentGeenee Project</button>
+    <button onclick="showSection('cgknights')"><i class="fa-solid fa-users"></i> CG Knights Team</button>
   </div>
 
   <div id="daytonight" class="video-section">
-    <h2>Day to Night</h2>
+    <h2>Day to Night 🌙</h2>
     <video controls>
       <source src="daytonight.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
     </video>
   </div>
 
   <div id="compositing" class="video-section">
-    <h2>3D Compositing</h2>
+    <h2>3D Compositing 🧊</h2>
     <video controls>
       <source src="3dcompositing.mp4" type="video/mp4" />
     </video>
   </div>
 
   <div id="paint" class="video-section">
-    <h2>Paint Cleanup</h2>
+    <h2>Paint Cleanup 🎨</h2>
     <video controls>
       <source src="paintcleanup.mp4" type="video/mp4" />
     </video>
   </div>
 
   <div id="roto" class="video-section">
-    <h2>Roto</h2>
+    <h2>Roto ✂️</h2>
     <video controls>
       <source src="roto.mp4" type="video/mp4" />
     </video>
   </div>
 
   <div id="keying" class="video-section">
-    <h2>Keying</h2>
+    <h2>Keying 🔑</h2>
     <video controls>
       <source src="keying.mp4" type="video/mp4" />
     </video>
   </div>
 
   <div id="parentgeenee" class="video-section">
-    <h2>ParentGeenee Live Project</h2>
+    <h2>ParentGeenee Live Project 🚀</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/krzeTttqiFI" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div id="cgknights" class="video-section">
-    <h2>CG Knights Team Project</h2>
+    <h2>CG Knights Team Project 🛡️</h2>
     <video controls>
       <source src="cgknights.mp4" type="video/mp4" />
     </video>
