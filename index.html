@@ -2,171 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sree Vaishnavi Chillara – VFX Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sree Vaishnavi | VFX Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Pacifico&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://i.imgur.com/GdZoI6X.jpg') no-repeat center center fixed;
+      font-family: 'Quicksand', sans-serif;
+      background: url('https://i.pinimg.com/736x/8f/c5/67/8fc567ffb31516b37d31f91ada8fdfe4.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #4d4d4d;
+      text-align: center;
+      color: #333;
     }
 
     header {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 1.5rem;
+      border-bottom: 2px solid #ddd;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-style: italic;
+      font-size: 2.8rem;
+      color: #5b4b8a;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #6c757d;
+      margin: 0;
+    }
+
+    .container {
       padding: 2rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #5a3e36;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    header:hover {
-      background-color: rgba(255, 240, 255, 0.75);
-      transform: scale(1.01);
-    }
-
-    .section-buttons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      padding: 2rem;
+      gap: 1.5rem;
     }
 
-    .section-buttons button {
-      background-color: #ffe0f0;
-      color: #5a3e36;
-      border: 2px solid #ffc1cc;
-      padding: 1rem 2rem;
-      border-radius: 15px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    .video-card {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 1rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+      transition: transform 0.3s ease;
     }
 
-    .section-buttons button:hover {
-      background-color: #ffebf5;
-      transform: scale(1.08);
+    .video-card:hover {
+      transform: translateY(-5px);
     }
 
-    .video-section {
-      display: none;
-      padding: 2rem;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(6px);
-      border-radius: 15px;
-      margin: 2rem auto;
-      width: 90%;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    video, iframe {
+      width: 100%;
+      border-radius: 12px;
     }
 
-    .video-section.active {
-      display: block;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    iframe, video {
-      max-width: 90vw;
-      height: auto;
-      border-radius: 15px;
-      margin-top: 1rem;
-      border: 3px solid #ffe6f0;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-      color: #b85c7e;
-    }
-
-    .emoji {
+    h3 {
+      margin-top: 0.75rem;
       font-size: 1.2rem;
-      margin-left: 0.5rem;
+      color: #4b3f72;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
-    🎨 Sree Vaishnavi Chillara – Visual Effects Portfolio ✨
-    <p style="font-size: 1rem; font-weight: normal; margin-top: 0.5rem;">Let’s make pixels dance and magic happen! 🪄💫</p>
+    <h1>Sree Vaishnavi's Visual Effects Portfolio</h1>
+    <p class="subtitle">Day to Night | 3D Compositing | Roto | Paint Cleanup | Keying | Team Projects</p>
   </header>
 
-  <div class="section-buttons">
-    <button onclick="showSection('daytonight')"><i class="fa-solid fa-cloud-moon"></i> Day to Night</button>
-    <button onclick="showSection('compositing')"><i class="fa-solid fa-cube"></i> 3D Compositing</button>
-    <button onclick="showSection('paint')"><i class="fa-solid fa-paintbrush"></i> Paint Cleanup</button>
-    <button onclick="showSection('roto')"><i class="fa-solid fa-scissors"></i> Roto</button>
-    <button onclick="showSection('keying')"><i class="fa-solid fa-key"></i> Keying</button>
-    <button onclick="showSection('parentgeenee')"><i class="fa-solid fa-rocket"></i> ParentGeenee Project</button>
-    <button onclick="showSection('cgknights')"><i class="fa-solid fa-users"></i> CG Knights Team</button>
+  <div class="container">
+    <div class="video-card">
+      <video controls>
+        <source src="day_to_night.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>Day to Night</h3>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="3d_compositing.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>3D Compositing</h3>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="paint_cleanup.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>Paint Cleanup</h3>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="roto.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>Roto</h3>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="keying.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>Keying</h3>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/krzeTttqiFI?si=j2lyQEdeEhL6mh7B" frameborder="0" allowfullscreen></iframe>
+      <h3>ParentGeenee Live Project</h3>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="cg_knights_project.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>CG Knights Team Project</h3>
+    </div>
   </div>
 
-  <div id="daytonight" class="video-section">
-    <h2>Day to Night 🌙</h2>
-    <video controls>
-      <source src="daytonight.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div id="compositing" class="video-section">
-    <h2>3D Compositing 🧊</h2>
-    <video controls>
-      <source src="3dcompositing.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div id="paint" class="video-section">
-    <h2>Paint Cleanup 🎨</h2>
-    <video controls>
-      <source src="paintcleanup.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div id="roto" class="video-section">
-    <h2>Roto ✂️</h2>
-    <video controls>
-      <source src="roto.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div id="keying" class="video-section">
-    <h2>Keying 🔑</h2>
-    <video controls>
-      <source src="keying.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div id="parentgeenee" class="video-section">
-    <h2>ParentGeenee Live Project 🚀</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/krzeTttqiFI" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <div id="cgknights" class="video-section">
-    <h2>CG Knights Team Project 🛡️</h2>
-    <video controls>
-      <source src="cgknights.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.video-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+  <footer>
+    Designed with 💖 by Sree Vaishnavi Chillara | Editable anytime via GitHub
+  </footer>
 </body>
 </html>
