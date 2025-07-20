@@ -1,33 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sree Vaishnavi Chillara – My Visual Effects Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sree Vaishnavi Chillara – VFX Portfolio</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #111;
-      color: #eee;
-      text-align: center;
-      padding: 50px;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: #f0f0f0;
     }
-    video {
-      max-width: 100%;
-      margin-top: 30px;
-      border: 2px solid #fff;
+    header {
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .section-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .section-buttons button {
+      background-color: #292b2c;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .section-buttons button:hover {
+      background-color: #515254;
+    }
+    .video-section {
+      display: none;
+      padding: 2rem;
+      text-align: center;
+    }
+    .video-section.active {
+      display: block;
+    }
+    iframe, video {
+      max-width: 90vw;
+      height: auto;
+      border-radius: 15px;
+      margin-top: 1rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
-  <h1>Sree Vaishnavi Chillara</h1>
-  <h2>My Visual Effects Portfolio</h2>
-  <p>The showreel video will be uploaded here soon.</p>
+  <header>Sree Vaishnavi Chillara – Visual Effects Portfolio</header>
 
-  <!-- Video player -->
-  <video controls>
-    <source src="showreel.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="section-buttons">
+    <button onclick="showSection('daytonight')">Day to Night</button>
+    <button onclick="showSection('compositing')">3D Compositing</button>
+    <button onclick="showSection('paint')">Paint Cleanup</button>
+    <button onclick="showSection('roto')">Roto</button>
+    <button onclick="showSection('keying')">Keying</button>
+    <button onclick="showSection('parentgeenee')">ParentGeenee Live Project</button>
+    <button onclick="showSection('cgknights')">CG Knights Team Project</button>
+  </div>
+
+  <div id="daytonight" class="video-section">
+    <h2>Day to Night</h2>
+    <video controls>
+      <source src="daytonight.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div id="compositing" class="video-section">
+    <h2>3D Compositing</h2>
+    <video controls>
+      <source src="3dcompositing.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div id="paint" class="video-section">
+    <h2>Paint Cleanup</h2>
+    <video controls>
+      <source src="paintcleanup.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div id="roto" class="video-section">
+    <h2>Roto</h2>
+    <video controls>
+      <source src="roto.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div id="keying" class="video-section">
+    <h2>Keying</h2>
+    <video controls>
+      <source src="keying.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div id="parentgeenee" class="video-section">
+    <h2>ParentGeenee Live Project</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/krzeTttqiFI" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div id="cgknights" class="video-section">
+    <h2>CG Knights Team Project</h2>
+    <video controls>
+      <source src="cgknights.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.video-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
