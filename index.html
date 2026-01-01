@@ -3,137 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sree Vaishnavi Chillara – VFX Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Sree Vaishnavi | VFX Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Pacifico&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff4f4;
-      color: #4d4d4d;
+      font-family: 'Quicksand', sans-serif;
+      background: url('https://i.pinimg.com/736x/8f/c5/67/8fc567ffb31516b37d31f91ada8fdfe4.jpg') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      color: #333;
     }
+
     header {
-      background: linear-gradient(to right, #ffd6e0, #e0bbff);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 1.5rem;
+      border-bottom: 2px solid #ddd;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-style: italic;
+      font-size: 2.8rem;
+      color: #5b4b8a;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #6c757d;
+      margin: 0;
+    }
+
+    .container {
       padding: 2rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #5a3e36;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      padding: 2.5rem;
-    }
-
-    .card {
-      background: #fff8fc;
-      border-radius: 18px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-    }
-
-    .card video {
-      width: 100%;
-      display: block;
-    }
-
-    .card-title {
+    .video-card {
+      background: rgba(255, 255, 255, 0.85);
       padding: 1rem;
-      text-align: center;
-      font-weight: 600;
-      color: #b85c7e;
-      background: #ffe6f0;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+      transition: transform 0.3s ease;
     }
 
-    iframe {
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    video, iframe {
       width: 100%;
-      height: 220px;
-      border: none;
+      border-radius: 12px;
+    }
+
+    h3 {
+      margin-top: 0.75rem;
+      font-size: 1.2rem;
+      color: #4b3f72;
     }
 
     footer {
-      text-align: center;
-      padding: 1.5rem;
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.7);
       font-size: 0.9rem;
-      color: #888;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Sree Vaishnavi's Visual Effects Portfolio</h1>
+    <p class="subtitle">Day to Night | 3D Compositing | Roto | Paint Cleanup | Keying | Team Projects</p>
+  </header>
 
-<header>
-  <em>🎨 Sree Vaishnavi Chillara – Visual Effects Portfolio ✨</em>
-  <p style="font-size:1rem; font-weight:normal;">Clean previews • Soft pastels • Visual storytelling ✨</p>
-</header>
+  <div class="container">
+    <div class="video-card">
+      <video controls>
+        <source src="day_to_night.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>Day to Night</h3>
+    </div>
 
-<section class="grid">
+    <div class="video-card">
+      <video controls>
+        <source src="3d_compositing.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>3D Compositing</h3>
+    </div>
 
-  <div class="card">
-    <video controls poster="">
-      <source src="daytonight.mp4" type="video/mp4">
-    </video>
-    <div class="card-title">Day to Night 🌙</div>
+    <div class="video-card">
+      <video controls>
+        <source src="paint_cleanup.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>Paint Cleanup</h3>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="roto.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>Roto</h3>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="keying.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>Keying</h3>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/krzeTttqiFI?si=j2lyQEdeEhL6mh7B" frameborder="0" allowfullscreen></iframe>
+      <h3>ParentGeenee Live Project</h3>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="cg_knights_project.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h3>CG Knights Team Project</h3>
+    </div>
   </div>
 
-  <div class="card">
-    <video controls>
-      <source src="cgcompositing.mp4" type="video/mp4">
-    </video>
-    <div class="card-title">CG Compositing 🧊</div>
-  </div>
-
-  <div class="card">
-    <video controls>
-      <source src="paintcleanup.mp4" type="video/mp4">
-    </video>
-    <div class="card-title">Paint Cleanup 🎨</div>
-  </div>
-
-  <div class="card">
-    <video controls>
-      <source src="roto.mp4" type="video/mp4">
-    </video>
-    <div class="card-title">Roto ✂️</div>
-  </div>
-
-  <div class="card">
-    <video controls>
-      <source src="keying.mp4" type="video/mp4">
-    </video>
-    <div class="card-title">Keying 🔑</div>
-  </div>
-
-  <div class="card">
-    <iframe src="https://www.youtube.com/embed/krzeTttqiFI" allowfullscreen></iframe>
-    <div class="card-title">ParentGeenee – Live Project 🚀</div>
-  </div>
-
-  <div class="card">
-    <video controls>
-      <source src="cgknights.mp4" type="video/mp4">
-    </video>
-    <div class="card-title">CG Knights – Team Project 🛡️</div>
-  </div>
-
-</section>
-
-<footer>
-  © 2026 • Sree Vaishnavi Chillara • Visual Effects Portfolio
-</footer>
-
+  <footer>
+    Designed with 💖 by Sree Vaishnavi Chillara | Editable anytime via GitHub
+  </footer>
 </body>
 </html>
-
-
-
-
