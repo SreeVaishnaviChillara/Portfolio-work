@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/cream-pixels.png') repeat, #fceef5;
+      background: #fff4f4;
       color: #4d4d4d;
     }
     header {
@@ -21,116 +21,119 @@
       color: #5a3e36;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .section-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 2rem;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 2.5rem;
     }
-    .section-buttons button {
-      background-color: #ffe0f0;
-      color: #5a3e36;
-      border: 2px solid #ffc1cc;
-      padding: 1rem 2rem;
-      border-radius: 15px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .section-buttons button:hover {
-      background-color: #ffebf5;
-      transform: scale(1.05);
-    }
-    .video-section {
-      display: none;
-      padding: 2rem;
-      text-align: center;
+
+    .card {
       background: #fff8fc;
-      border-radius: 15px;
-      margin: 2rem auto;
-      width: 90%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .video-section.active {
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    .card video {
+      width: 100%;
       display: block;
     }
-    iframe, video {
-      max-width: 90vw;
-      height: auto;
-      border-radius: 15px;
-      margin-top: 1rem;
-      border: 3px solid #ffe6f0;
-    }
-    h2 {
-      margin-bottom: 1rem;
+
+    .card-title {
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
       color: #b85c7e;
+      background: #ffe6f0;
     }
-    .emoji {
-      font-size: 1.2rem;
-      margin-left: 0.5rem;
+
+    iframe {
+      width: 100%;
+      height: 220px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <header>
-    <em>🎨 Sree Vaishnavi Chillara – Visual Effects Portfolio ✨</em>
-    <p style="font-size: 1rem; font-weight: normal; margin-top: 0.5rem;">Hi! I’m Vaishnavi 👋 I love creating visual magic through compositing, roto & cleanup 🪄💫</p>
-  </header>
 
-  <section class="section-buttons">
-    <button onclick="showSection('daytonight')"><i class="fa-solid fa-cloud-moon"></i><br>Day to Night</button>
-    <button onclick="showSection('compositing')"><i class="fa-solid fa-cube"></i><br>CG Compositing</button>
-    <button onclick="showSection('paint')"><i class="fa-solid fa-paintbrush"></i><br>Paint Cleanup</button>
-    <button onclick="showSection('roto')"><i class="fa-solid fa-scissors"></i><br>Roto</button>
-    <button onclick="showSection('keying')"><i class="fa-solid fa-key"></i><br>Keying</button>
-    <button onclick="showSection('parentgeenee')"><i class="fa-solid fa-rocket"></i><br>ParentGeenee</button>
-    <button onclick="showSection('cgknights')"><i class="fa-solid fa-users"></i><br>CG Knights</button>
-  </section>
+<header>
+  <em>🎨 Sree Vaishnavi Chillara – Visual Effects Portfolio ✨</em>
+  <p style="font-size:1rem; font-weight:normal;">Clean previews • Soft pastels • Visual storytelling ✨</p>
+</header>
 
-  <div id="daytonight" class="video-section">
-    <h2>Day to Night 🌙</h2>
-    <video controls><source src="daytonight.mp4" type="video/mp4" /></video>
+<section class="grid">
+
+  <div class="card">
+    <video controls poster="">
+      <source src="daytonight.mp4" type="video/mp4">
+    </video>
+    <div class="card-title">Day to Night 🌙</div>
   </div>
 
-  <div id="compositing" class="video-section">
-    <h2>CG Compositing 🧊</h2>
-    <video controls><source src="cgcompositing.mp4" type="video/mp4" /></video>
+  <div class="card">
+    <video controls>
+      <source src="cgcompositing.mp4" type="video/mp4">
+    </video>
+    <div class="card-title">CG Compositing 🧊</div>
   </div>
 
-  <div id="paint" class="video-section">
-    <h2>Paint Cleanup 🎨</h2>
-    <video controls><source src="paintcleanup.mp4" type="video/mp4" /></video>
+  <div class="card">
+    <video controls>
+      <source src="paintcleanup.mp4" type="video/mp4">
+    </video>
+    <div class="card-title">Paint Cleanup 🎨</div>
   </div>
 
-  <div id="roto" class="video-section">
-    <h2>Roto ✂️</h2>
-    <video controls><source src="roto.mp4" type="video/mp4" /></video>
+  <div class="card">
+    <video controls>
+      <source src="roto.mp4" type="video/mp4">
+    </video>
+    <div class="card-title">Roto ✂️</div>
   </div>
 
-  <div id="keying" class="video-section">
-    <h2>Keying 🔑</h2>
-    <video controls><source src="keying.mp4" type="video/mp4" /></video>
+  <div class="card">
+    <video controls>
+      <source src="keying.mp4" type="video/mp4">
+    </video>
+    <div class="card-title">Keying 🔑</div>
   </div>
 
-  <div id="parentgeenee" class="video-section">
-    <h2>ParentGeenee Live Project 🚀</h2>
+  <div class="card">
     <iframe src="https://www.youtube.com/embed/krzeTttqiFI" allowfullscreen></iframe>
+    <div class="card-title">ParentGeenee – Live Project 🚀</div>
   </div>
 
-  <div id="cgknights" class="video-section">
-    <h2>CG Knights Team Project 🛡️</h2>
-    <video controls><source src="cgknights.mp4" type="video/mp4" /></video>
+  <div class="card">
+    <video controls>
+      <source src="cgknights.mp4" type="video/mp4">
+    </video>
+    <div class="card-title">CG Knights – Team Project 🛡️</div>
   </div>
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.video-section').forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+</section>
+
+<footer>
+  © 2026 • Sree Vaishnavi Chillara • Visual Effects Portfolio
+</footer>
+
 </body>
 </html>
+
+
 
 
