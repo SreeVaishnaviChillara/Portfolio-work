@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sree Vaishnavi | VFX Portfolio</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Pacifico&display=swap" rel="stylesheet" />
+
   <style>
     body {
       margin: 0;
@@ -16,23 +18,20 @@
     }
 
     header {
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.75);
       padding: 1.5rem;
-      border-bottom: 2px solid #ddd;
     }
 
     h1 {
       font-family: 'Pacifico', cursive;
-      font-style: italic;
       font-size: 2.8rem;
       color: #5b4b8a;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
-    p.subtitle {
-      font-size: 1.2rem;
-      color: #6c757d;
-      margin: 0;
+    .subtitle {
+      font-size: 1.1rem;
+      color: #666;
     }
 
     .container {
@@ -44,97 +43,140 @@
     }
 
     .video-card {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.9);
       padding: 1rem;
       border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       width: 320px;
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-    .video-card:hover {
-      transform: translateY(-5px);
+    .thumb {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: white;
+      text-shadow: 0 0 10px black;
     }
 
     iframe {
       width: 100%;
       height: 180px;
-      border-radius: 12px;
       border: none;
+      border-radius: 12px;
+      display: none;
     }
 
     h3 {
-      margin-top: 0.75rem;
-      font-size: 1.2rem;
+      margin-top: 0.8rem;
       color: #4b3f72;
     }
 
     footer {
       margin-top: 3rem;
       padding: 1rem;
-      background-color: rgba(255, 255, 255, 0.7);
+      background: rgba(255,255,255,0.75);
       font-size: 0.9rem;
     }
   </style>
+
+  <script>
+    function playVideo(card) {
+      card.querySelector('.thumb').style.display = 'none';
+      card.querySelector('iframe').style.display = 'block';
+    }
+  </script>
 </head>
 
 <body>
-  <header>
-    <h1>Sree Vaishnavi's Visual Effects Portfolio</h1>
-    <p class="subtitle">Day to Night | CG Comp Shot 1 | CG Comp Shot 2 | Roto | Paint Cleanup | Chroma Removal | Team Projects</p>
-  </header>
 
-  <div class="container">
+<header>
+  <h1>Sree Vaishnavi's Visual Effects Portfolio</h1>
+  <p class="subtitle">
+    CG Comp | Day to Night | Roto | Paint Cleanup | Chroma Removal
+  </p>
+</header>
 
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1TV0eCqAF17MAeAV62TXHmyBrEDo51nDB/preview"></iframe>
-      <h3>Day to Night</h3>
+<div class="container">
+
+  <!-- DAY TO NIGHT -->
+  <div class="video-card" onclick="playVideo(this)">
+    <div class="thumb">
+      <img src="https://drive.google.com/file/d/1xadZUNUySnsb-EVt4F-yOTZIduhAbu3r/view?usp=sharing">
+      <div class="play">▶</div>
     </div>
-
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/16AHxKmCyrMNti-DJWXQ-Zu18nFtQzUCS/preview"></iframe>
-      <h3>CG Comp Shot 1</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1OfAyXsYTE7uHRLHlbcE_LbxHScnhrITp/preview"></iframe>
-      <h3>CG Comp Shot 2</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1AC3yIOLhZqmi9fQfmKVsonxvHAD1aXTV/preview"></iframe>
-      <h3>Paint Cleanup</h3>
-    </div>
-
-    <!-- ✅ ROTO (ADDED) -->
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/14zuIGcLVlQ0mR2BeOzUIGvmXaIgnrpTi/preview"></iframe>
-      <h3>Roto</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1i_l7Sj2x7DL0gzYlW9Vecdq_GWaHSHLX/preview"></iframe>
-      <h3>Chroma Removal</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/krzeTttqiFI?si=j2lyQEdeEhL6mh7B" allowfullscreen></iframe>
-      <h3>ParentGeenee Live Project</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/14L5kdA_5rhMAwK_ldkN85H3iTONeP1AF/preview"></iframe>
-      <h3>CG Knights Team Project</h3>
-    </div>
-
+    <iframe src="https://drive.google.com/file/d/1TV0eCqAF17MAeAV62TXHmyBrEDo51nDB/preview"></iframe>
+    <h3>Day to Night</h3>
   </div>
 
-  <footer>
-    Designed with 💖 by Sree Vaishnavi Chillara | Editable anytime via GitHub
-  </footer>
+  <!-- CG COMP SHOT 1 -->
+  <div class="video-card" onclick="playVideo(this)">
+    <div class="thumb">
+      <img src="https://drive.google.com/file/d/19ju8T7EwX6MnaLzg1vu7Nh1RoDVKg-zW/view?usp=sharing">
+      <div class="play">▶</div>
+    </div>
+    <iframe src="https://drive.google.com/file/d/16AHxKmCyrMNti-DJWXQ-Zu18nFtQzUCS/preview"></iframe>
+    <h3>CG Comp Shot 1</h3>
+  </div>
+
+  <!-- CG COMP SHOT 2 -->
+  <div class="video-card" onclick="playVideo(this)">
+    <div class="thumb">
+      <img src="https://drive.google.com/file/d/1JPSqOQpdS7ryCEY4yrnCrwTnv4KVsVvQ/view?usp=sharing">
+      <div class="play">▶</div>
+    </div>
+    <iframe src="https://drive.google.com/file/d/1OfAyXsYTE7uHRLHlbcE_LbxHScnhrITp/preview"></iframe>
+    <h3>CG Comp Shot 2</h3>
+  </div>
+
+  <!-- PAINT CLEANUP -->
+  <div class="video-card" onclick="playVideo(this)">
+    <div class="thumb">
+      <img src="https://drive.google.com/file/d/1gmxw5b4qGOxCYbwypFnkF-vdC9IVvunD/view?usp=sharing">
+      <div class="play">▶</div>
+    </div>
+    <iframe src="https://drive.google.com/file/d/1AC3yIOLhZqmi9fQfmKVsonxvHAD1aXTV/preview"></iframe>
+    <h3>Paint Cleanup</h3>
+  </div>
+
+  <!-- ROTO -->
+  <div class="video-card" onclick="playVideo(this)">
+    <div class="thumb">
+      <img src="https://drive.google.com/file/d/13pHBK7kqKJ0tKXrlseLpcPaJ7xIVLc0Z/view?usp=sharing">
+      <div class="play">▶</div>
+    </div>
+    <iframe src="https://drive.google.com/file/d/14zuIGcLVlQ0mR2BeOzUIGvmXaIgnrpTi/preview"></iframe>
+    <h3>Roto</h3>
+  </div>
+
+  <!-- CHROMA REMOVAL -->
+  <div class="video-card" onclick="playVideo(this)">
+    <div class="thumb">
+      <img src="https://drive.google.com/file/d/1-5Yb0aVNamSw27zfJgDXxIsxDOpPSYLH/view?usp=sharing">
+      <div class="play">▶</div>
+    </div>
+    <iframe src="https://drive.google.com/file/d/1i_l7Sj2x7DL0gzYlW9Vecdq_GWaHSHLX/preview"></iframe>
+    <h3>Chroma Removal</h3>
+  </div>
+
+</div>
+
+<footer>
+  Designed with 💖 by Sree Vaishnavi Chillara | Editable anytime via GitHub
+</footer>
+
 </body>
 </html>
-
-
-
-
