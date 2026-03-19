@@ -11,7 +11,6 @@
       font-family: 'Quicksand', sans-serif;
       background: url('https://i.pinimg.com/736x/8f/c5/67/8fc567ffb31516b37d31f91ada8fdfe4.jpg') no-repeat center center fixed;
       background-size: cover;
-      text-align: center;
       color: #333;
     }
 
@@ -19,6 +18,7 @@
       background-color: rgba(255, 255, 255, 0.7);
       padding: 1.5rem;
       border-bottom: 2px solid #ddd;
+      text-align: center;
     }
 
     h1 {
@@ -35,49 +35,58 @@
       margin: 0;
     }
 
-    /* ✅ NEW PROFILE SECTION */
-    .profile-section {
-      background: rgba(255,255,255,0.85);
-      margin: 2rem auto;
+    /* ✅ NEW LAYOUT */
+    .main {
+      display: flex;
+      gap: 1.5rem;
       padding: 2rem;
-      width: 80%;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .profile-img {
-      width: 120px;
-      height: 120px;
+    /* LEFT PROFILE */
+    .profile {
+      width: 280px;
+      background: rgba(255,255,255,0.9);
+      padding: 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      height: fit-content;
+      position: sticky;
+      top: 20px;
+    }
+
+    .profile img {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
     }
 
-    .profile-title {
-      font-size: 1.4rem;
+    .profile h2 {
+      font-size: 1.2rem;
       color: #5b4b8a;
       margin-bottom: 0.5rem;
     }
 
-    .profile-text {
-      font-size: 0.95rem;
-      color: #444;
-      line-height: 1.6;
+    .profile p {
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
-    .divider {
-      width: 60%;
-      height: 1px;
-      background: #ccc;
-      margin: 2rem auto;
+    .profile small {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #666;
     }
 
+    /* RIGHT WORK */
     .container {
-      padding: 2rem;
+      flex: 1;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 1.5rem;
+      justify-content: center;
     }
 
     .video-card {
@@ -87,8 +96,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       width: 320px;
       transition: transform 0.3s ease;
-      text-decoration: none;
-      color: inherit;
     }
 
     .video-card:hover {
@@ -102,22 +109,11 @@
       border: none;
     }
 
-    .insta-box {
-      height: 180px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
-      color: white;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
     h3 {
       margin-top: 0.75rem;
       font-size: 1.2rem;
       color: #4b3f72;
+      text-align: center;
     }
 
     footer {
@@ -125,11 +121,13 @@
       padding: 1rem;
       background-color: rgba(255, 255, 255, 0.7);
       font-size: 0.9rem;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
+
   <header>
     <h1>Sree Vaishnavi's Visual Effects Portfolio</h1>
     <p class="subtitle">
@@ -137,95 +135,99 @@
     </p>
   </header>
 
-  <!-- ✅ PROFILE SECTION -->
-  <div class="profile-section">
-    <img src="https://drive.google.com/uc?export=view&id=16tLQnfwYurqkUiRTJ5S9AtESCFfEdnQR" class="profile-img" />
+  <div class="main">
 
-    <div class="profile-title">
-      Sree Vaishnavi Chillara | Visual Effects Artist
+    <!-- ✅ LEFT PROFILE -->
+    <div class="profile">
+      <img src="https://drive.google.com/uc?export=view&id=16tLQnfwYurqkUiRTJ5S9AtESCFfEdnQR" />
+
+      <h2>Sree Vaishnavi Chillara</h2>
+      <p><b>Visual Effects Artist</b></p>
+
+      <p>
+        Visual Effects student with a background in Computer Science, focused on compositing and post-production.
+      </p>
+
+      <p>
+        Built this portfolio using my own coding knowledge to present my work.
+      </p>
+
+      <small>
+        Skills: Nuke, Roto, Paint, Chroma, 3D Comp
+      </small>
+
+      <small>
+        Work: ParentGeenee | Create-O-Wonder Winner | CG Knights
+      </small>
     </div>
 
-    <div class="profile-text">
-      I am a Visual Effects student with a background in Computer Science, focused on compositing and post-production. I enjoy combining technical skills with creativity to create clean and realistic visuals.<br><br>
+    <!-- ✅ RIGHT SIDE (UNCHANGED CONTENT) -->
+    <div class="container">
 
-      This portfolio website was built by me using my own coding knowledge to present my work in an organized and interactive way.<br><br>
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/1c3XI9iBqjRCdwYdDrOUbMT8B7j4pEDVv/preview"></iframe>
+        <h3>Day to Night</h3>
+      </div>
 
-      <b>Skills:</b> Compositing (Nuke), Roto, Paint Cleanup, Chroma Removal, 3D Compositing<br><br>
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/1BXjdYxL6fL4P3slbgW78UbiXulAHTsBE/preview"></iframe>
+        <h3>CG Comp Shot 1</h3>
+      </div>
 
-      <b>Experience:</b> ParentGeenee Live Project, Create-O-Wonder Challenge Winner, CG Knights Team Project<br><br>
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/1jk8-8OvKGTwoU72L-QXwyT0CxluFM3Ih/preview"></iframe>
+        <h3>CG Comp Shot 2</h3>
+      </div>
 
-      Open to learning opportunities and collaborations.
-    </div>
-  </div>
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/19jFuZAZKEBuiDnY-cbjJVMB07JFYICRX/preview"></iframe>
+        <h3>Paint Cleanup</h3>
+      </div>
 
-  <!-- Divider like Behance -->
-  <div class="divider"></div>
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/1sMM5VmIdhaEkGGHT3qvNkS4h9LBNo-Ff/preview"></iframe>
+        <h3>Roto</h3>
+      </div>
 
-  <div class="container">
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/1j2_6T9sSy34CEt7hJyTTPfGq3BtSRDKU/preview"></iframe>
+        <h3>Chroma Removal</h3>
+      </div>
 
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1c3XI9iBqjRCdwYdDrOUbMT8B7j4pEDVv/preview"></iframe>
-      <h3>Day to Night</h3>
-    </div>
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/1wBmWwCKcSMYbexM7gPZ3YN-Z9Zxh0D4M/preview"></iframe>
+        <h3>Chroma Removal – Shot 2</h3>
+      </div>
 
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1BXjdYxL6fL4P3slbgW78UbiXulAHTsBE/preview"></iframe>
-      <h3>CG Comp Shot 1</h3>
-    </div>
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/19Tc_T6HHMTSkJPswNlWuno4ssrBbjmuh/preview"></iframe>
+        <h3>Create-O-Wonder Challenge</h3>
+      </div>
 
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1jk8-8OvKGTwoU72L-QXwyT0CxluFM3Ih/preview"></iframe>
-      <h3>CG Comp Shot 2</h3>
-    </div>
+      <div class="video-card">
+        <blockquote
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/DGNQ_-AypP8/"
+          data-instgrm-version="14"
+          style="width:100%; margin:0 auto;">
+        </blockquote>
+        <h3>ParentGeenee Live Project Participation</h3>
+      </div>
 
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/19jFuZAZKEBuiDnY-cbjJVMB07JFYICRX/preview"></iframe>
-      <h3>Paint Cleanup</h3>
-    </div>
+      <div class="video-card">
+        <iframe src="https://drive.google.com/file/d/14L5kdA_5rhMAwK_ldkN85H3iTONeP1AF/preview"></iframe>
+        <h3>CG Knights Team Project</h3>
+      </div>
 
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1sMM5VmIdhaEkGGHT3qvNkS4h9LBNo-Ff/preview"></iframe>
-      <h3>Roto</h3>
-    </div>
+      <div class="video-card">
+        <iframe 
+          src="https://www.instagram.com/reel/DJgcoWMpCpL/embed"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+        <h3>Cardboard Challenge – Team Project</h3>
+      </div>
 
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1j2_6T9sSy34CEt7hJyTTPfGq3BtSRDKU/preview"></iframe>
-      <h3>Chroma Removal</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/1wBmWwCKcSMYbexM7gPZ3YN-Z9Zxh0D4M/preview"></iframe>
-      <h3>Chroma Removal – Shot 2</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/19Tc_T6HHMTSkJPswNlWuno4ssrBbjmuh/preview"></iframe>
-      <h3>Create-O-Wonder Challenge</h3>
-    </div>
-
-    <div class="video-card">
-      <blockquote
-        class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DGNQ_-AypP8/"
-        data-instgrm-version="14"
-        style="width:100%; margin:0 auto;">
-      </blockquote>
-      <h3>ParentGenee Live Project Participation</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://drive.google.com/file/d/14L5kdA_5rhMAwK_ldkN85H3iTONeP1AF/preview"></iframe>
-      <h3>CG Knights Team Project</h3>
-    </div>
-
-    <div class="video-card">
-      <iframe 
-        src="https://www.instagram.com/reel/DJgcoWMpCpL/embed"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin">
-      </iframe>
-      <h3>Cardboard Challenge – Team Project</h3>
     </div>
 
   </div>
