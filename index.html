@@ -35,6 +35,43 @@
       margin: 0;
     }
 
+    /* ✅ NEW PROFILE SECTION */
+    .profile-section {
+      background: rgba(255,255,255,0.85);
+      margin: 2rem auto;
+      padding: 2rem;
+      width: 80%;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .profile-title {
+      font-size: 1.4rem;
+      color: #5b4b8a;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-text {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .divider {
+      width: 60%;
+      height: 1px;
+      background: #ccc;
+      margin: 2rem auto;
+    }
+
     .container {
       padding: 2rem;
       display: flex;
@@ -100,6 +137,30 @@
     </p>
   </header>
 
+  <!-- ✅ PROFILE SECTION -->
+  <div class="profile-section">
+    <img src="https://drive.google.com/uc?export=view&id=16tLQnfwYurqkUiRTJ5S9AtESCFfEdnQR" class="profile-img" />
+
+    <div class="profile-title">
+      Sree Vaishnavi Chillara | Visual Effects Artist
+    </div>
+
+    <div class="profile-text">
+      I am a Visual Effects student with a background in Computer Science, focused on compositing and post-production. I enjoy combining technical skills with creativity to create clean and realistic visuals.<br><br>
+
+      This portfolio website was built by me using my own coding knowledge to present my work in an organized and interactive way.<br><br>
+
+      <b>Skills:</b> Compositing (Nuke), Roto, Paint Cleanup, Chroma Removal, 3D Compositing<br><br>
+
+      <b>Experience:</b> ParentGeenee Live Project, Create-O-Wonder Challenge Winner, CG Knights Team Project<br><br>
+
+      Open to learning opportunities and collaborations.
+    </div>
+  </div>
+
+  <!-- Divider like Behance -->
+  <div class="divider"></div>
+
   <div class="container">
 
     <div class="video-card">
@@ -127,25 +188,21 @@
       <h3>Roto</h3>
     </div>
 
-    <!-- Chroma Removal Shot 1 -->
     <div class="video-card">
       <iframe src="https://drive.google.com/file/d/1j2_6T9sSy34CEt7hJyTTPfGq3BtSRDKU/preview"></iframe>
       <h3>Chroma Removal</h3>
     </div>
 
-    <!-- Chroma Removal Shot 2 -->
     <div class="video-card">
       <iframe src="https://drive.google.com/file/d/1wBmWwCKcSMYbexM7gPZ3YN-Z9Zxh0D4M/preview"></iframe>
       <h3>Chroma Removal – Shot 2</h3>
     </div>
 
-    <!-- ✅ NEW WORK ADDED (ONLY ADDITION) -->
     <div class="video-card">
       <iframe src="https://drive.google.com/file/d/19Tc_T6HHMTSkJPswNlWuno4ssrBbjmuh/preview"></iframe>
       <h3>Create-O-Wonder Challenge</h3>
     </div>
 
-    <!-- Live Project Instagram Post -->
     <div class="video-card">
       <blockquote
         class="instagram-media"
@@ -161,7 +218,6 @@
       <h3>CG Knights Team Project</h3>
     </div>
 
-    <!-- Instagram Reel -->
     <div class="video-card">
       <iframe 
         src="https://www.instagram.com/reel/DJgcoWMpCpL/embed"
